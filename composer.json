@@ -1,0 +1,60 @@
+{
+    "name": "wild-garlic/hello-world",
+    "description": "A basic PHP hello world example",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "composer",
+        "package",
+        "hello",
+        "world"
+    ],
+    "authors": [
+        {
+            "name": "Feng Xin",
+            "email": "fx@dialogs.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "ramsey/devtools": "^2.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "wildgarlic\\helloworld\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "wildgarlic\\Test\\helloworld\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ramsey/composer-repl": true,
+            "phpstan/extension-installer": true,
+            "ergebnis/composer-normalize": true,
+            "captainhook/plugin-composer": true,
+            "ramsey/devtools": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "captainhook": {
+            "force-install": true
+        },
+        "ramsey/conventional-commits": {
+            "configFile": "conventional-commits.json"
+        },
+        "ramsey/devtools": {
+            "command-prefix": "dev",
+            "memory-limit": "-1"
+        }
+    }
+}
